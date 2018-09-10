@@ -1,6 +1,6 @@
 # Event-Driven Microservices Orchestration using Camunda, Spring Boot, and ActiveMQ
 
-This is an example project of the article: ["Event-driven Orchestration: An Effective Microservices Integration using BPMN and AMQP"](https://dzone.com/articles/event-driven-orchestration-an-effective-microservi).
+This is an example project based on the article: ["Event-driven Orchestration: An Effective Microservices Integration using BPMN and AMQP"](https://dzone.com/articles/event-driven-orchestration-an-effective-microservi).
 
 ## Overview
 This sample consists of three sub-projects:
@@ -28,7 +28,7 @@ This sample consists of three sub-projects:
 * Clone or download project from [github](https://github.com/mocvin/microservices-orchestration-using-camunda-activemq)
 * Build the three projects respectively. For example:
 ```
-$ cd microservices-orchestration-amqp-example
+$ cd microservices-orchestration-using-camunda-activemq
 $ cd canonical-model
 $ mvn clean install
 $ cd ../shoppingcart-service
