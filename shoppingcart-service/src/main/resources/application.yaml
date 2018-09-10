@@ -1,0 +1,16 @@
+camunda.bpm:
+  admin-user:
+    id: admin
+    password: admin
+    firstName: Admin
+  filter:
+    create: All tasks
+    
+spring:
+  datasource:
+    url: jdbc:h2:~/camunda;DB_CLOSE_ON_EXIT=false
+
+broker:
+  url: tcp://localhost:61616?jms.redeliveryPolicy.maximumRedeliveries=1
+  user: admin
+  password: admin

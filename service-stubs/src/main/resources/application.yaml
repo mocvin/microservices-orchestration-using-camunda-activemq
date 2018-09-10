@@ -1,0 +1,55 @@
+spring:
+  profiles: default
+
+broker:
+  url: tcp://localhost:61616?jms.redeliveryPolicy.maximumRedeliveries=1
+  user: admin
+  password: admin
+
+---
+
+spring:
+  profiles: location
+  include: 
+  - default
+queue: LocationService.queue
+
+---
+
+spring:
+  profiles: payment
+  include: 
+  - default
+queue: PaymentService.queue
+
+---
+
+spring:
+  profiles: inventory
+  include: 
+  - default
+queue: InventoryService.queue
+
+---
+
+spring:
+  profiles: order
+  include: 
+  - default
+queue: OrderService.queue
+
+---
+
+spring:
+  profiles: customer
+  include: 
+  - default
+queue: CustomerService.queue
+
+---
+
+spring:
+  profiles: backoffice
+  include: 
+  - default
+queue: BackOfficeService.queue
