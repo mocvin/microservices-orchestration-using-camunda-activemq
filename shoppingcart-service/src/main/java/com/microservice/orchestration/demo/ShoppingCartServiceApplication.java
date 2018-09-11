@@ -20,6 +20,7 @@ import com.microservice.orchestration.demo.com.microservice.orchestration.adapte
 import com.microservice.orchestration.demo.com.microservice.orchestration.adapter.JmsRpcClient;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
+import org.h2.tools.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -39,6 +40,7 @@ import org.springframework.jms.support.converter.MessageConverter;
 import org.springframework.jms.support.converter.MessageType;
 
 import javax.jms.ConnectionFactory;
+import java.sql.SQLException;
 
 /**
  * @author <a href="mailto:colinlucs@gmail.com">Colin Lu</a>
@@ -106,4 +108,5 @@ public class ShoppingCartServiceApplication {
 	public JmsRpcClient jmsRpcClient() {
 		return new JmsRpcClient();
 	}
+
 }

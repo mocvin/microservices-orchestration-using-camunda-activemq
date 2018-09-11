@@ -8,9 +8,13 @@ camunda.bpm:
     
 spring:
   datasource:
-    url: jdbc:h2:~/camunda;DB_CLOSE_ON_EXIT=false
-
+    url: jdbc:h2:./camunda-h2-dbs/process-engine;DB_CLOSE_ON_EXIT=false;AUTO_SERVER=TRUE
+    username: sa
+    password: sa
 broker:
   url: tcp://localhost:61616?jms.redeliveryPolicy.maximumRedeliveries=1
   user: admin
   password: admin
+
+server:
+  port: 8081
